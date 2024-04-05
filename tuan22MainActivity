@@ -1,0 +1,18 @@
+package com.example.myapplication_a42416_tuan2.tuan2
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.ListView
+import com.example.myapplication_a42416_tuan2.R
+
+class tuan22MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_tuan22_main)
+        var lv1=findViewById<ListView>(R.id.tuan22Lv1)
+        var arr= arrayOf("Item1","Item2","Item3","Item4");
+        val adapter1=ArrayAdapter(this,android.R.layout.simple_list_item_1,arr)
+        lv1!!.adapter=adapter1
+    }
+}
