@@ -1,0 +1,21 @@
+package com.example.myapplication_a42416_tuan2.tuan2
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.TextView
+import com.example.myapplication_a42416_tuan2.R
+
+class tuan21MainActivityresult : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_tuan21_main_activityresult)
+        var tvKQ=findViewById<TextView>(R.id.tuan2TvKq)
+        val i1=intent
+        val cso1=(i1.extras!!.getString("so1"))
+        val cso2=(i1.extras!!.getString("so2"))
+        val so1=cso1!!.toFloat()
+        val so2=cso2!!.toFloat()
+        val tong= so1+so2
+        tvKQ!!.text=tong.toString()
+    }
+}
